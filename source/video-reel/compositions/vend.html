@@ -1,0 +1,57 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: linear-gradient(180deg, #c97f55 0%, #b06a44 55%, #8a5233 100%);
+      font-family: "Lato", sans-serif;
+      color: #fbf3e3;
+    }
+    #ve-quote {
+      position: absolute;
+      left: 108px;
+      top: 220px;
+      width: 864px;
+      font-family: "EB Garamond", serif;
+      font-size: 76px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.16;
+      text-shadow: 0 2px 18px rgba(40, 20, 10, 0.35);
+    }
+    #ve-map { position: absolute; left: 108px; top: 820px; width: 864px; height: 457px; }
+    .ve-place {
+      position: absolute;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.3;
+      text-shadow: 0 2px 8px rgba(60, 20, 10, 0.6);
+    }
+    #ve-p1 { left: 560px; top: 1060px; width: 360px; }
+    #ve-p2 { left: 140px; top: 870px; width: 420px; }
+    #ve-brand { position: absolute; left: 108px; top: 1400px; width: 864px; text-align: center; }
+    #ve-brand img { width: 230px; height: 230px; }
+    #ve-brand p { margin-top: 20px; font-family: "EB Garamond", serif; font-size: 58px; font-weight: 600; }
+    #ve-brand span { display: block; margin-top: 6px; font-family: "Lato", sans-serif; font-size: 30px; font-weight: 700; letter-spacing: 4px; color: #fbe3d0; }
+  </style>
+  <div id="root" data-composition-id="vend" data-width="1080" data-height="1920">
+    <p id="ve-quote">“Every sip connects us to the farmer, the soil and the tiny guardians who made it possible.”</p>
+    <img id="ve-map" src="assets/brand/world.png" alt="World map with a dotted line from Kenya in East Africa to Santa Fe, New Mexico" />
+    <p id="ve-p2" class="ve-place">SANTA FE, NEW MEXICO</p>
+    <p id="ve-p1" class="ve-place">KENYA,<br />EAST AFRICA</p>
+    <div id="ve-brand">
+      <img src="assets/brand/jirani-logo.png" alt="Jirani Kenyan Coffee logo" />
+      <p>The Neighbor’s Cup<span>JIRANI COFFEE LAB · SANTA FE</span></p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ve-quote", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 0.3);
+    tl.fromTo("#ve-map", { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 1.4, ease: "power2.out" }, 1.4);
+    tl.fromTo(["#ve-p1", "#ve-p2"], { opacity: 0 }, { opacity: 1, duration: 0.8, stagger: 0.6, ease: "power2.out" }, 2.4);
+    tl.fromTo("#ve-brand", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1.0, ease: "back.out(1.3)" }, 4.6);
+    window.__timelines["vend"] = tl;
+  </script>
+</template>

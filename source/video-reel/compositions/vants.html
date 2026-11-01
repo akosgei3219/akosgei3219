@@ -1,0 +1,73 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 55% 50%, #fbf3e3 0%, #f4eee4 45%, #e6dccb 100%);
+      font-family: "Lato", sans-serif;
+      color: #1c1712;
+    }
+    #va-head { position: absolute; left: 108px; top: 200px; width: 864px; }
+    .va-eyebrow { font-size: 32px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: #9a3b22; }
+    .va-title { margin-top: 16px; font-family: "EB Garamond", serif; font-size: 100px; font-weight: 600; line-height: 1.04; }
+    #va-art { position: absolute; left: 0; top: 560px; width: 1080px; height: 760px; }
+    .va-label { position: absolute; left: 108px; width: 864px; font-size: 40px; line-height: 1.3; color: #4a3f35; }
+    .va-label b { display: block; font-size: 46px; color: #1c1712; }
+    .va-label i { color: #9a3b22; }
+    #va-l1 { top: 1340px; }
+    #va-l2 { top: 1470px; }
+    #va-l3 { top: 1600px; }
+  </style>
+  <div id="root" data-composition-id="vants" data-width="1080" data-height="1920">
+    <div id="va-head">
+      <p class="va-eyebrow">The miniature army</p>
+      <h2 class="va-title">Nature’s built-in bodyguards</h2>
+    </div>
+    <svg id="va-art" viewBox="0 0 1080 760">
+      <ellipse cx="640" cy="520" rx="440" ry="120" fill="#4f6b3a" transform="rotate(-8 640 520)" />
+      <path d="M240 580 C 520 520 800 480 1060 450" stroke="#3e5a36" stroke-width="6" fill="none" />
+      <g id="va-nest">
+        <ellipse cx="200" cy="300" rx="170" ry="100" fill="#5c7a45" transform="rotate(-12 200 300)" />
+        <ellipse cx="140" cy="245" rx="130" ry="62" fill="#4f6b3a" transform="rotate(-40 140 245)" />
+        <ellipse cx="280" cy="262" rx="130" ry="62" fill="#3e5a36" transform="rotate(30 280 262)" />
+        <ellipse cx="200" cy="372" rx="150" ry="58" fill="#3e5a36" transform="rotate(8 200 372)" />
+        <g id="va-silk" stroke="#fbf8f2" stroke-width="4" opacity="0.9">
+          <line x1="100" y1="245" x2="165" y2="320" /><line x1="135" y1="228" x2="200" y2="312" />
+          <line x1="250" y1="245" x2="200" y2="330" /><line x1="285" y1="272" x2="230" y2="345" />
+          <line x1="120" y1="335" x2="185" y2="372" /><line x1="270" y1="335" x2="210" y2="380" />
+        </g>
+      </g>
+      <g id="va-ant">
+        <g transform="translate(680 400) rotate(178) scale(1.35)">
+          <g stroke="#7a3f12" stroke-width="7" stroke-linecap="round" fill="none">
+            <path d="M-20 10 L -70 60 L -110 70" /><path d="M0 12 L -10 70 L -30 100" /><path d="M20 10 L 60 60 L 90 80" />
+            <path d="M-20 -10 L -70 -50 L -110 -60" /><path d="M0 -12 L -10 -60 L -30 -90" /><path d="M20 -10 L 60 -50 L 90 -70" />
+            <path d="M100 -18 L 150 -60 L 200 -50" /><path d="M100 18 L 150 60 L 200 50" />
+          </g>
+          <ellipse cx="-110" cy="0" rx="78" ry="46" fill="#c8741e" />
+          <ellipse cx="-122" cy="-12" rx="34" ry="14" fill="#f0b76a" opacity="0.6" />
+          <ellipse cx="0" cy="0" rx="46" ry="20" fill="#b9661a" />
+          <circle cx="72" cy="0" r="34" fill="#c8741e" />
+          <circle cx="88" cy="-14" r="7" fill="#2a1a0c" /><circle cx="88" cy="14" r="7" fill="#2a1a0c" />
+        </g>
+      </g>
+    </svg>
+    <p id="va-l1" class="va-label"><b>Weaver ants</b><i>Oecophylla longinoda</i>, native to Africa</p>
+    <p id="va-l2" class="va-label"><b>Leaf nests</b>Stitched together from living leaves</p>
+    <p id="va-l3" class="va-label"><b>On patrol</b>Hunting the insects that threaten the crop</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#va-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.3);
+    tl.fromTo("#va-ant", { x: 640, y: -10 }, { x: 0, y: 0, duration: 1.8, ease: "power2.out" }, 0.6);
+    tl.to("#va-ant", { x: -40, y: 10, duration: 6.5, ease: "sine.inOut" }, 2.6);
+    tl.fromTo("#va-l1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 1.4);
+    tl.fromTo("#va-nest", { opacity: 0 }, { opacity: 1, duration: 1.0, ease: "power3.out" }, 2.4);
+    tl.fromTo("#va-silk", { opacity: 0 }, { opacity: 0.9, duration: 0.8, ease: "sine.out" }, 3.4);
+    tl.fromTo("#va-l2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 3.6);
+    tl.fromTo("#va-l3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 6.6);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 9.5);
+    window.__timelines["vants"] = tl;
+  </script>
+</template>

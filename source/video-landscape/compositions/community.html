@@ -1,0 +1,119 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 55%, #fbf3e3 0%, #f4eee4 50%, #e6dccb 100%);
+      font-family: "Lato", sans-serif;
+      color: #1c1712;
+    }
+    #comm-head {
+      position: absolute;
+      left: 192px;
+      top: 130px;
+      width: 1400px;
+    }
+    #comm-eyebrow {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #9a3b22;
+    }
+    #comm-title {
+      margin-top: 14px;
+      font-family: "EB Garamond", serif;
+      font-size: 88px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+    #comm-title i { color: #9a3b22; }
+    .comm-card {
+      position: absolute;
+      top: 420px;
+      width: 600px;
+      height: 340px;
+      border-radius: 28px;
+      padding: 48px 52px;
+    }
+    #comm-kenya { left: 192px; background: #4f6b3a; color: #f4eee4; }
+    #comm-sf { left: 1128px; background: #b5432a; color: #fbf3e3; }
+    .comm-tag {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 5px;
+    }
+    #comm-kenya .comm-tag { color: #e8c88a; }
+    #comm-sf .comm-tag { color: #fbe3d0; }
+    .comm-place {
+      margin-top: 12px;
+      font-family: "EB Garamond", serif;
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+    .comm-who {
+      margin-top: 22px;
+      font-size: 36px;
+      line-height: 1.35;
+    }
+    #comm-line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #comm-logo {
+      position: absolute;
+      left: 860px;
+      top: 490px;
+      width: 200px;
+      height: 200px;
+    }
+    #comm-close {
+      position: absolute;
+      left: 192px;
+      top: 850px;
+      width: 1536px;
+      text-align: center;
+      font-family: "EB Garamond", serif;
+      font-size: 76px;
+      font-weight: 600;
+      color: #1c1712;
+    }
+  </style>
+  <div id="root" data-composition-id="community" data-width="1920" data-height="1080">
+    <svg id="comm-line" viewBox="0 0 1920 1080">
+      <path id="comm-dots" d="M792 590 L 1128 590" stroke="#9a3b22" stroke-width="6" stroke-dasharray="2 18" stroke-linecap="round" fill="none" />
+    </svg>
+    <div id="comm-head">
+      <p id="comm-eyebrow">06 · The communities</p>
+      <h2 id="comm-title"><i>Jirani</i> means neighbor</h2>
+    </div>
+    <div id="comm-kenya" class="comm-card">
+      <p class="comm-tag">KENYA, EAST AFRICA</p>
+      <p class="comm-place">Elgeyo-Marakwet</p>
+      <p class="comm-who">Farming families in the Great Rift Valley who grow the coffee</p>
+    </div>
+    <div id="comm-sf" class="comm-card">
+      <p class="comm-tag">NEW MEXICO</p>
+      <p class="comm-place">Santa Fe</p>
+      <p class="comm-who">YouthWorks trainees, Reunity Resources and coffee lovers</p>
+    </div>
+    <img id="comm-logo" src="assets/brand/jirani-logo.png" alt="Jirani Kenyan Coffee logo" />
+    <p id="comm-close">Two communities, one cup.</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#comm-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.4);
+    tl.fromTo("#comm-kenya", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 2.4);
+    tl.fromTo("#comm-sf", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 5.6);
+    tl.fromTo("#comm-dots", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "sine.inOut" }, 7.6);
+    tl.fromTo("#comm-logo", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.6)" }, 8.6);
+    tl.fromTo("#comm-close", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 9.1);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 11.9);
+    window.__timelines["community"] = tl;
+  </script>
+</template>
