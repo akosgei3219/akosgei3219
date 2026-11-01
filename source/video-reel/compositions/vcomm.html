@@ -1,0 +1,59 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 50%, #fbf3e3 0%, #f4eee4 50%, #e6dccb 100%);
+      font-family: "Lato", sans-serif;
+      color: #1c1712;
+    }
+    #vc-head { position: absolute; left: 108px; top: 200px; width: 864px; }
+    #vc-eyebrow { font-size: 32px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: #9a3b22; }
+    #vc-title { margin-top: 16px; font-family: "EB Garamond", serif; font-size: 96px; font-weight: 600; line-height: 1.04; }
+    #vc-title i { color: #9a3b22; }
+    .vc-card { position: absolute; left: 108px; width: 864px; height: 330px; border-radius: 32px; padding: 48px 56px; }
+    #vc-kenya { top: 520px; background: #4f6b3a; color: #f4eee4; }
+    #vc-sf { top: 1150px; background: #b5432a; color: #fbf3e3; }
+    .vc-tag { font-size: 30px; font-weight: 700; letter-spacing: 5px; }
+    #vc-kenya .vc-tag { color: #e8c88a; }
+    #vc-sf .vc-tag { color: #fbe3d0; }
+    .vc-place { margin-top: 10px; font-family: "EB Garamond", serif; font-size: 76px; font-weight: 600; line-height: 1.05; }
+    .vc-who { margin-top: 18px; font-size: 40px; line-height: 1.3; }
+    #vc-line { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #vc-logo { position: absolute; left: 430px; top: 890px; width: 220px; height: 220px; }
+    #vc-close { position: absolute; left: 108px; top: 1540px; width: 864px; text-align: center; font-family: "EB Garamond", serif; font-size: 84px; font-weight: 600; line-height: 1.08; }
+  </style>
+  <div id="root" data-composition-id="vcomm" data-width="1080" data-height="1920">
+    <svg id="vc-line" viewBox="0 0 1080 1920">
+      <path id="vc-dots" d="M540 850 L 540 1150" stroke="#9a3b22" stroke-width="7" stroke-dasharray="2 20" stroke-linecap="round" fill="none" />
+    </svg>
+    <div id="vc-head">
+      <p id="vc-eyebrow">The communities</p>
+      <h2 id="vc-title"><i>Jirani</i> means neighbor</h2>
+    </div>
+    <div id="vc-kenya" class="vc-card">
+      <p class="vc-tag">KENYA, EAST AFRICA</p>
+      <p class="vc-place">Elgeyo-Marakwet</p>
+      <p class="vc-who">Farming families in the Great Rift Valley</p>
+    </div>
+    <div id="vc-sf" class="vc-card">
+      <p class="vc-tag">NEW MEXICO</p>
+      <p class="vc-place">Santa Fe</p>
+      <p class="vc-who">YouthWorks trainees, Reunity Resources and coffee lovers</p>
+    </div>
+    <img id="vc-logo" src="assets/brand/jirani-logo.png" alt="Jirani Kenyan Coffee logo" />
+    <p id="vc-close">Two communities,<br />one cup.</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#vc-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.4);
+    tl.fromTo("#vc-kenya", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 2.4);
+    tl.fromTo("#vc-sf", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.9, ease: "power3.out" }, 5.6);
+    tl.fromTo("#vc-dots", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "sine.inOut" }, 7.6);
+    tl.fromTo("#vc-logo", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.6)" }, 8.6);
+    tl.fromTo("#vc-close", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 9.1);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 11.9);
+    window.__timelines["vcomm"] = tl;
+  </script>
+</template>

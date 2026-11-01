@@ -1,0 +1,127 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 60% 55%, #3a2a1c 0%, #1c1712 70%);
+      font-family: "Lato", sans-serif;
+      color: #f4eee4;
+    }
+    #cherry-art {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #cherry-head {
+      position: absolute;
+      left: 192px;
+      top: 130px;
+      width: 1300px;
+    }
+    #cherry-eyebrow {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #e3a27c;
+    }
+    #cherry-title {
+      margin-top: 14px;
+      font-family: "EB Garamond", serif;
+      font-size: 88px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+    .cherry-label {
+      position: absolute;
+      font-size: 36px;
+      line-height: 1.3;
+      color: #e6dccb;
+    }
+    .cherry-label b {
+      display: block;
+      font-size: 40px;
+      color: #f4eee4;
+    }
+    #cherry-l1 { left: 1180px; top: 300px; width: 560px; }
+    #cherry-l2 { left: 192px; top: 800px; width: 640px; }
+    #cherry-l3 { left: 1180px; top: 860px; width: 560px; }
+    #cherry-haze {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(150, 150, 140, 0) 30%, rgba(170, 170, 160, 0.35) 100%);
+    }
+  </style>
+  <div id="root" data-composition-id="cherry" data-width="1920" data-height="1080">
+    <svg id="cherry-art" viewBox="0 0 1920 1080">
+      <path id="cherry-branch" d="M-40 690 C 400 640 760 640 1060 620 S 1600 560 1980 520" stroke="#5a3d28" stroke-width="22" fill="none" stroke-linecap="round" />
+      <g id="cherry-leaves">
+        <ellipse cx="420" cy="590" rx="150" ry="52" fill="#3e5a36" transform="rotate(-24 420 590)" />
+        <ellipse cx="560" cy="740" rx="160" ry="54" fill="#4f6b3a" transform="rotate(28 560 740)" />
+        <ellipse cx="830" cy="560" rx="150" ry="50" fill="#4f6b3a" transform="rotate(-30 830 560)" />
+        <ellipse cx="1380" cy="510" rx="160" ry="52" fill="#3e5a36" transform="rotate(-20 1380 510)" />
+        <ellipse cx="1520" cy="680" rx="150" ry="50" fill="#4f6b3a" transform="rotate(30 1520 680)" />
+        <ellipse cx="1760" cy="460" rx="140" ry="48" fill="#3e5a36" transform="rotate(-18 1760 460)" />
+      </g>
+      <g id="cherry-cluster">
+        <circle class="cherry-c" cx="960" cy="660" r="42" fill="#7da453" />
+        <circle class="cherry-c" cx="1040" cy="672" r="44" fill="#7da453" />
+        <circle class="cherry-c" cx="1000" cy="730" r="44" fill="#7da453" />
+        <circle class="cherry-c" cx="1100" cy="640" r="40" fill="#7da453" />
+        <circle class="cherry-c" cx="1090" cy="720" r="42" fill="#7da453" />
+        <circle class="cherry-c" cx="920" cy="720" r="38" fill="#7da453" />
+        <circle class="cherry-c" cx="1160" cy="690" r="38" fill="#7da453" />
+        <circle cx="948" cy="646" r="10" fill="#ffffff" opacity="0.35" />
+        <circle cx="1028" cy="656" r="10" fill="#ffffff" opacity="0.35" />
+        <circle cx="988" cy="714" r="10" fill="#ffffff" opacity="0.35" />
+        <circle cx="1088" cy="626" r="9" fill="#ffffff" opacity="0.35" />
+        <circle cx="1078" cy="704" r="9" fill="#ffffff" opacity="0.35" />
+      </g>
+      <g id="cherry-beetle">
+        <ellipse cx="0" cy="0" rx="22" ry="14" fill="#140f0b" />
+        <circle cx="22" cy="0" r="8" fill="#140f0b" />
+        <line x1="-10" y1="-12" x2="-18" y2="-24" stroke="#140f0b" stroke-width="3" />
+        <line x1="6" y1="-12" x2="10" y2="-25" stroke="#140f0b" stroke-width="3" />
+        <line x1="-10" y1="12" x2="-18" y2="24" stroke="#140f0b" stroke-width="3" />
+        <line x1="6" y1="12" x2="10" y2="25" stroke="#140f0b" stroke-width="3" />
+      </g>
+      <line id="cherry-lead1" x1="1180" y1="420" x2="1110" y2="610" stroke="#e3a27c" stroke-width="3" stroke-dasharray="220" stroke-dashoffset="220" />
+      <line id="cherry-lead2" x1="640" y1="800" x2="1180" y2="700" stroke="#e3a27c" stroke-width="3" stroke-dasharray="560" stroke-dashoffset="560" />
+      <g id="cherry-spray" fill="#c9c6bb">
+        <circle cx="1700" cy="300" r="9" /><circle cx="1760" cy="380" r="6" /><circle cx="1640" cy="420" r="7" />
+        <circle cx="1820" cy="260" r="5" /><circle cx="1580" cy="330" r="6" /><circle cx="1720" cy="480" r="8" />
+        <circle cx="1850" cy="420" r="7" /><circle cx="1620" cy="250" r="5" /><circle cx="1790" cy="540" r="6" />
+        <circle cx="1540" cy="460" r="5" /><circle cx="1680" cy="560" r="7" /><circle cx="1880" cy="340" r="6" />
+      </g>
+    </svg>
+    <div id="cherry-haze"></div>
+    <div id="cherry-head">
+      <p id="cherry-eyebrow">01 · The vulnerable harvest</p>
+      <h2 id="cherry-title">Cultivating the perfect cherry</h2>
+    </div>
+    <p id="cherry-l1" class="cherry-label"><b>SL-28</b>Bright acidity, black-currant notes</p>
+    <p id="cherry-l2" class="cherry-label"><b>Coffee berry borer</b>Bores into the cherry and damages the bean</p>
+    <p id="cherry-l3" class="cherry-label"><b>The usual fix</b>Chemical insecticide spray</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#cherry-art", { scale: 1.04, x: 20 }, { scale: 1.0, x: 0, duration: 14.5, ease: "sine.out" }, 0);
+    tl.fromTo("#cherry-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.4);
+    tl.fromTo(".cherry-c", { fill: "#7da453" }, { fill: "#e3b23c", duration: 1.6, stagger: 0.12, ease: "sine.inOut" }, 1.2);
+    tl.to(".cherry-c", { fill: "#a8321f", duration: 1.8, stagger: 0.12, ease: "sine.inOut" }, 3.0);
+    tl.fromTo("#cherry-lead1", { strokeDashoffset: 220 }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.out" }, 1.6);
+    tl.fromTo("#cherry-l1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 1.8);
+    tl.fromTo("#cherry-beetle", { x: 1880, y: 532, rotation: 175 }, { x: 1210, y: 600, rotation: 172, duration: 3.2, ease: "power1.inOut" }, 5.6);
+    tl.fromTo("#cherry-lead2", { strokeDashoffset: 560 }, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 7.0);
+    tl.fromTo("#cherry-l2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 7.2);
+    tl.fromTo("#cherry-spray", { opacity: 0, x: 120, y: 150 }, { opacity: 0.85, x: -200, y: 230, duration: 4, ease: "sine.out" }, 10.0);
+    tl.fromTo("#cherry-haze", { opacity: 0 }, { opacity: 1, duration: 2.5, ease: "sine.inOut" }, 10.2);
+    tl.fromTo("#cherry-l3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 10.6);
+    tl.fromTo("#cherry-leaves", { opacity: 1 }, { opacity: 0.6, duration: 2.5, ease: "sine.inOut" }, 10.6);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 14.0);
+    window.__timelines["cherry"] = tl;
+  </script>
+</template>

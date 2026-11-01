@@ -1,0 +1,125 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #1c1712;
+      font-family: "Lato", sans-serif;
+      color: #f4eee4;
+    }
+    #vr-outside {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #6f9cc0 0%, #a9c4d6 38%, #f2d3a6 58%, #d9a273 72%);
+    }
+    #vr-land { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+    #vr-head { position: absolute; left: 108px; top: 200px; width: 864px; }
+    .vr-eyebrow { font-size: 32px; font-weight: 700; letter-spacing: 6px; text-transform: uppercase; color: #7a2e1a; }
+    .vr-title { margin-top: 16px; font-family: "EB Garamond", serif; font-size: 104px; font-weight: 600; line-height: 1.04; color: #1c1712; }
+    .vr-label { position: absolute; left: 108px; width: 864px; font-size: 40px; line-height: 1.3; }
+    .vr-label b { display: block; font-size: 50px; }
+    #vr-o1 { top: 470px; color: #2a2018; }
+    #vr-o2 { top: 620px; color: #2a2018; }
+    #vr-inside {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 35%, #3a2a1c 0%, #1c1712 70%);
+    }
+    #vr-art { position: absolute; left: 40px; top: 300px; width: 1000px; height: 733px; }
+    #vr-i1 { top: 1130px; }
+    #vr-i1 b { font-family: "EB Garamond", serif; font-size: 104px; font-weight: 600; line-height: 1.04; color: #f4eee4; }
+    #vr-i1 span { color: #e3a27c; font-size: 38px; }
+    #vr-i2 { top: 1380px; color: #e6dccb; }
+    #vr-i2 b { color: #e8c88a; }
+    #vr-i3 { top: 1560px; color: #e6dccb; }
+    #vr-i3 b { color: #e8c88a; }
+  </style>
+  <div id="root" data-composition-id="vroast" data-width="1080" data-height="1920">
+    <div id="vr-outside">
+      <svg id="vr-land" viewBox="0 0 1080 1920">
+        <path d="M0 1180 L 140 1120 L 260 1130 L 360 1090 L 520 1100 L 620 1140 L 800 1110 L 900 1080 L 1080 1110 L 1080 1920 L 0 1920 Z" fill="#b4673f" />
+        <path d="M0 1300 C 300 1280 700 1290 1080 1270 L 1080 1920 L 0 1920 Z" fill="#8a5a3a" />
+        <g id="vr-trailer">
+          <ellipse cx="0" cy="250" rx="330" ry="22" fill="#4a3022" opacity="0.45" />
+          <path d="M-300 220 C -300 60 -220 0 -60 0 L 120 0 C 260 0 320 70 320 200 L 320 225 L -300 225 Z" fill="#c9ced3" />
+          <path d="M-270 60 C -240 20 -180 10 -60 10 L 120 10 C 230 10 290 50 305 110 L -285 110 Z" fill="#e6eaed" opacity="0.8" />
+          <line x1="-300" y1="150" x2="320" y2="150" stroke="#9aa1a8" stroke-width="4" />
+          <rect x="140" y="50" width="120" height="70" rx="20" fill="#5d7f99" />
+          <rect x="-200" y="60" width="140" height="60" rx="18" fill="#5d7f99" />
+          <rect x="20" y="70" width="80" height="150" rx="8" fill="#a7adb3" />
+          <circle cx="-80" cy="232" r="38" fill="#2a2420" /><circle cx="-80" cy="232" r="16" fill="#8f949a" />
+          <rect x="320" y="200" width="90" height="10" fill="#6b6f74" />
+        </g>
+      </svg>
+      <div id="vr-head">
+        <p class="vr-eyebrow">The roast</p>
+        <h2 class="vr-title">Roasted in Santa Fe</h2>
+      </div>
+      <p id="vr-o1" class="vr-label"><b>Jirani Coffee Lab</b>A mobile roastery and training lab</p>
+      <p id="vr-o2" class="vr-label"><b>An Airstream at Reunity Resources</b>Spent grounds go back into the soil</p>
+    </div>
+    <div id="vr-inside">
+      <svg id="vr-art" viewBox="740 220 900 660">
+        <g id="vr-heat">
+          <rect x="1150" y="660" width="380" height="14" rx="7" fill="#e3743a" />
+          <rect x="1150" y="690" width="380" height="14" rx="7" fill="#e3743a" />
+        </g>
+        <path d="M1260 250 L 1420 250 L 1380 360 L 1300 360 Z" fill="#6e7378" />
+        <rect x="1300" y="360" width="80" height="40" fill="#55595d" />
+        <rect x="1110" y="400" width="460" height="300" rx="40" fill="#2e3236" />
+        <rect x="1130" y="420" width="420" height="40" rx="12" fill="#43484d" />
+        <circle cx="1240" cy="560" r="90" fill="#3a3f44" stroke="#5c6267" stroke-width="10" />
+        <circle id="vr-window" cx="1240" cy="560" r="40" fill="#c8741e" opacity="0.65" />
+        <rect x="1440" y="500" width="100" height="140" rx="12" fill="#1f2226" />
+        <rect x="1455" y="515" width="70" height="40" rx="6" fill="#7fb2c9" />
+        <rect x="1180" y="700" width="40" height="120" fill="#24282b" />
+        <rect x="1460" y="700" width="40" height="120" fill="#24282b" />
+        <ellipse cx="1000" cy="800" rx="230" ry="70" fill="#3d4247" />
+        <ellipse cx="1000" cy="790" rx="210" ry="58" fill="#55595d" />
+        <g>
+          <ellipse class="vr-bean" cx="900" cy="780" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="940" cy="800" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="980" cy="770" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1020" cy="805" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1060" cy="775" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1100" cy="795" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="870" cy="805" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="960" cy="815" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1040" cy="820" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1130" cy="785" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="920" cy="765" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="vr-bean" cx="1000" cy="790" rx="16" ry="11" fill="#8ba35a" />
+        </g>
+        <g id="vr-arm">
+          <line x1="1000" y1="790" x2="1180" y2="790" stroke="#9aa1a8" stroke-width="10" stroke-linecap="round" />
+        </g>
+        <circle cx="1000" cy="790" r="16" fill="#9aa1a8" />
+      </svg>
+      <p id="vr-i1" class="vr-label"><b>F16 Revelation</b><span>US Roaster Corp · built in Oklahoma City</span></p>
+      <p id="vr-i2" class="vr-label"><b>All-electric</b>Roasts clean, with a built-in catalytic converter</p>
+      <p id="vr-i3" class="vr-label"><b>YouthWorks Santa Fe</b>Young people learning the trade</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#vr-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.3);
+    tl.fromTo("#vr-trailer", { x: 1500, y: 1140 }, { x: 560, y: 1140, duration: 3.2, ease: "power2.out" }, 0.4);
+    tl.to("#vr-trailer", { x: 520, duration: 5, ease: "sine.inOut" }, 3.6);
+    tl.fromTo("#vr-o1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 2.0);
+    tl.fromTo("#vr-o2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 5.0);
+    tl.fromTo("#vr-inside", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.inOut" }, 8.6);
+    tl.to("#vr-outside", { opacity: 0, duration: 0.8, ease: "power2.inOut" }, 8.6);
+    tl.fromTo("#vr-art", { scale: 1.05 }, { scale: 1.0, duration: 11, ease: "sine.out" }, 8.6);
+    tl.fromTo("#vr-i1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 9.2);
+    tl.fromTo("#vr-heat", { opacity: 0.35 }, { opacity: 1, duration: 0.7, ease: "sine.inOut", repeat: 13, yoyo: true }, 9.0);
+    tl.fromTo("#vr-window", { opacity: 0.35 }, { opacity: 0.85, duration: 0.9, ease: "sine.inOut", repeat: 11, yoyo: true }, 9.0);
+    tl.fromTo("#vr-arm", { rotation: 0, svgOrigin: "1000 790" }, { rotation: 1080, svgOrigin: "1000 790", duration: 10.4, ease: "none" }, 9.2);
+    tl.fromTo(".vr-bean", { fill: "#8ba35a" }, { fill: "#c9a24a", duration: 2.0, stagger: 0.08, ease: "sine.inOut" }, 9.6);
+    tl.to(".vr-bean", { fill: "#5a3520", duration: 2.6, stagger: 0.08, ease: "sine.inOut" }, 11.8);
+    tl.fromTo("#vr-i2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 12.6);
+    tl.fromTo("#vr-i3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 14.3);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 19.0);
+    window.__timelines["vroast"] = tl;
+  </script>
+</template>

@@ -1,0 +1,109 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 65% 60%, #fbf3e3 0%, #f4eee4 45%, #e6dccb 100%);
+      font-family: "Lato", sans-serif;
+      color: #1c1712;
+    }
+    #ants-art {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #ants-head {
+      position: absolute;
+      left: 192px;
+      top: 130px;
+      width: 1300px;
+    }
+    #ants-eyebrow {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #9a3b22;
+    }
+    #ants-title {
+      margin-top: 14px;
+      font-family: "EB Garamond", serif;
+      font-size: 88px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+    .ants-label {
+      position: absolute;
+      font-size: 36px;
+      line-height: 1.3;
+      color: #4a3f35;
+    }
+    .ants-label b {
+      display: block;
+      font-size: 40px;
+      color: #1c1712;
+    }
+    .ants-label i { color: #9a3b22; }
+    #ants-l1 { left: 1420px; top: 330px; width: 380px; }
+    #ants-l2 { left: 192px; top: 860px; width: 640px; }
+    #ants-l3 { left: 1240px; top: 860px; width: 520px; }
+  </style>
+  <div id="root" data-composition-id="ants" data-width="1920" data-height="1080">
+    <svg id="ants-art" viewBox="0 0 1920 1080">
+      <ellipse cx="1260" cy="720" rx="620" ry="150" fill="#4f6b3a" transform="rotate(-6 1260 720)" />
+      <path d="M680 760 C 1000 700 1500 660 1860 640" stroke="#3e5a36" stroke-width="6" fill="none" />
+      <g id="ants-nest">
+        <ellipse cx="470" cy="620" rx="190" ry="110" fill="#5c7a45" transform="rotate(-12 470 620)" />
+        <ellipse cx="400" cy="560" rx="150" ry="70" fill="#4f6b3a" transform="rotate(-40 400 560)" />
+        <ellipse cx="560" cy="580" rx="150" ry="70" fill="#3e5a36" transform="rotate(30 560 580)" />
+        <ellipse cx="470" cy="700" rx="170" ry="66" fill="#3e5a36" transform="rotate(8 470 700)" />
+        <g id="ants-silk" stroke="#fbf8f2" stroke-width="4" opacity="0.9">
+          <line x1="360" y1="560" x2="430" y2="640" /><line x1="400" y1="540" x2="470" y2="630" />
+          <line x1="520" y1="560" x2="470" y2="650" /><line x1="560" y1="590" x2="500" y2="670" />
+          <line x1="380" y1="660" x2="450" y2="700" /><line x1="540" y1="660" x2="480" y2="710" />
+        </g>
+      </g>
+      <line id="ants-lead2" x1="420" y1="860" x2="460" y2="740" stroke="#9a3b22" stroke-width="3" stroke-dasharray="130" stroke-dashoffset="130" />
+      <g id="ants-ant">
+        <g stroke="#7a3f12" stroke-width="7" stroke-linecap="round" fill="none">
+          <path d="M-20 10 L -70 60 L -110 70" /><path d="M0 12 L -10 70 L -30 100" /><path d="M20 10 L 60 60 L 90 80" />
+          <path d="M-20 -10 L -70 -50 L -110 -60" /><path d="M0 -12 L -10 -60 L -30 -90" /><path d="M20 -10 L 60 -50 L 90 -70" />
+        </g>
+        <ellipse cx="-110" cy="0" rx="78" ry="46" fill="#c8741e" />
+        <ellipse cx="-122" cy="-12" rx="34" ry="14" fill="#f0b76a" opacity="0.6" />
+        <ellipse cx="0" cy="0" rx="46" ry="20" fill="#b9661a" />
+        <circle cx="72" cy="0" r="34" fill="#c8741e" />
+        <circle cx="88" cy="-14" r="7" fill="#2a1a0c" />
+        <circle cx="88" cy="14" r="7" fill="#2a1a0c" />
+        <g id="ants-antL"><path d="M100 -18 L 150 -60 L 200 -50" stroke="#7a3f12" stroke-width="6" fill="none" stroke-linecap="round" /></g>
+        <g id="ants-antR"><path d="M100 18 L 150 60 L 200 50" stroke="#7a3f12" stroke-width="6" fill="none" stroke-linecap="round" /></g>
+      </g>
+    </svg>
+    <div id="ants-head">
+      <p id="ants-eyebrow">02 · The miniature army</p>
+      <h2 id="ants-title">Nature’s built-in bodyguards</h2>
+    </div>
+    <p id="ants-l1" class="ants-label"><b>Weaver ant</b><i>Oecophylla longinoda</i>, native to Africa</p>
+    <p id="ants-l2" class="ants-label"><b>Leaf nests</b>Stitched together from living leaves</p>
+    <p id="ants-l3" class="ants-label"><b>On patrol</b>Hunts the insects that threaten the crop</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ants-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.3);
+    tl.fromTo("#ants-ant", { x: 2150, y: 700, scale: 1.5, rotation: 184 }, { x: 1560, y: 720, scale: 1.5, rotation: 178, duration: 1.8, ease: "power2.out" }, 0.6);
+    tl.fromTo("#ants-antL", { rotation: 0, svgOrigin: "100 -18" }, { rotation: -14, svgOrigin: "100 -18", duration: 0.5, ease: "sine.inOut", repeat: 15, yoyo: true }, 0.6);
+    tl.fromTo("#ants-antR", { rotation: 0, svgOrigin: "100 18" }, { rotation: 12, svgOrigin: "100 18", duration: 0.6, ease: "sine.inOut", repeat: 13, yoyo: true }, 0.6);
+    tl.fromTo("#ants-l1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 1.4);
+    tl.fromTo("#ants-nest", { opacity: 0, scale: 0.9, svgOrigin: "470 620" }, { opacity: 1, scale: 1, svgOrigin: "470 620", duration: 1.0, ease: "power3.out" }, 2.4);
+    tl.fromTo("#ants-silk", { opacity: 0 }, { opacity: 0.9, duration: 0.8, ease: "sine.out" }, 3.4);
+    tl.fromTo("#ants-lead2", { strokeDashoffset: 130 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 3.4);
+    tl.fromTo("#ants-l2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 3.6);
+    tl.to("#ants-ant", { x: 1480, y: 740, rotation: 172, duration: 2.6, ease: "sine.inOut" }, 6.2);
+    tl.fromTo("#ants-l3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 6.6);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 9.5);
+    window.__timelines["ants"] = tl;
+  </script>
+</template>

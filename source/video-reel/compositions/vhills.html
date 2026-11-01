@@ -1,0 +1,134 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: linear-gradient(180deg, #e9d9bf 0%, #c9c2a6 30%, #7d8a72 52%, #34433a 70%, #1c1712 100%);
+      font-family: "Lato", sans-serif;
+      color: #f4eee4;
+    }
+    #vh-sun {
+      position: absolute;
+      left: 560px;
+      top: 520px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 236, 196, 0.95) 0%, rgba(255, 220, 160, 0.35) 40%, rgba(255, 220, 160, 0) 70%);
+    }
+    #vh-land {
+      position: absolute;
+      left: -60px;
+      top: 0;
+      width: 1200px;
+      height: 1920px;
+    }
+    .vh-mist {
+      position: absolute;
+      left: -500px;
+      width: 2100px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(244, 238, 228, 0.55) 0%, rgba(244, 238, 228, 0) 70%);
+      filter: blur(18px);
+    }
+    #vh-mist1 { top: 760px; }
+    #vh-mist2 { top: 900px; height: 240px; }
+    #vh-mist3 { top: 1040px; }
+    #vh-shade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 900px;
+      background: linear-gradient(180deg, rgba(28, 23, 18, 0) 0%, rgba(28, 23, 18, 0.75) 35%, rgba(28, 23, 18, 0.94) 100%);
+    }
+    #vh-map {
+      position: absolute;
+      left: 340px;
+      top: 200px;
+      width: 400px;
+      text-align: center;
+    }
+    #vh-map img { width: 360px; height: 393px; opacity: 0.92; }
+    #vh-map p {
+      margin-top: 4px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      line-height: 1.3;
+      color: #7a2e1a;
+    }
+    #vh-copy {
+      position: absolute;
+      left: 108px;
+      top: 1180px;
+      width: 864px;
+    }
+    #vh-eyebrow {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      color: #f0b78f;
+    }
+    #vh-title {
+      margin-top: 20px;
+      font-family: "EB Garamond", serif;
+      font-size: 100px;
+      font-weight: 600;
+      line-height: 1.04;
+    }
+    #vh-title i { font-weight: 500; }
+    #vh-sub {
+      margin-top: 28px;
+      font-size: 44px;
+      line-height: 1.3;
+      color: #e6dccb;
+    }
+  </style>
+  <div id="root" data-composition-id="vhills" data-width="1080" data-height="1920">
+    <div id="vh-sun"></div>
+    <svg id="vh-land" viewBox="0 0 1200 1920" data-layout-allow-overflow>
+      <defs>
+        <pattern id="vh-rows" width="38" height="22" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+          <circle cx="10" cy="11" r="7" fill="#3f5a36" />
+          <circle cx="29" cy="11" r="7" fill="#3a5332" />
+        </pattern>
+      </defs>
+      <path d="M0 820 C 180 740 360 730 540 790 S 900 700 1200 760 L 1200 1920 L 0 1920 Z" fill="#8d9a86" />
+      <path d="M0 930 C 240 850 460 880 680 920 S 1000 840 1200 890 L 1200 1920 L 0 1920 Z" fill="#6c7d64" />
+      <path d="M0 1040 C 260 980 520 990 760 1040 S 1080 970 1200 1000 L 1200 1920 L 0 1920 Z" fill="url(#vh-rows)" />
+      <path d="M0 1170 C 300 1110 640 1130 1200 1150 L 1200 1920 L 0 1920 Z" fill="#26331f" />
+    </svg>
+    <div id="vh-mist1" class="vh-mist"></div>
+    <div id="vh-mist2" class="vh-mist"></div>
+    <div id="vh-mist3" class="vh-mist"></div>
+    <div id="vh-shade"></div>
+    <div id="vh-map">
+      <img src="assets/brand/africa-map.png" alt="Map of Africa with Kenya highlighted on the equator" />
+      <p>KENYA<br />EAST AFRICA</p>
+    </div>
+    <div id="vh-copy">
+      <p id="vh-eyebrow">Elgeyo-Marakwet · Kenya</p>
+      <h1 id="vh-title">Jirani Kahawa:<br /><i>The Neighbor’s&nbsp;Cup</i></h1>
+      <p id="vh-sub">From Kenya’s Great Rift Valley to Santa Fe, New Mexico</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#vh-land", { scale: 1.08, x: 0, y: 30 }, { scale: 1.0, x: -40, y: 0, duration: 9, ease: "sine.inOut" }, 0);
+    tl.fromTo("#vh-sun", { y: 40, opacity: 0.6 }, { y: -20, opacity: 1, duration: 9, ease: "sine.out" }, 0);
+    tl.fromTo("#vh-mist1", { x: 0 }, { x: -240, duration: 9, ease: "none" }, 0);
+    tl.fromTo("#vh-mist2", { x: -200 }, { x: 100, duration: 9, ease: "none" }, 0);
+    tl.fromTo("#vh-mist3", { x: 0, opacity: 0.8 }, { x: -160, opacity: 0.5, duration: 9, ease: "none" }, 0);
+    tl.fromTo("#vh-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 1.2);
+    tl.fromTo("#vh-title", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.4, ease: "power3.out" }, 1.6);
+    tl.fromTo("#vh-sub", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 3.2);
+    tl.fromTo("#vh-map", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 5.4);
+    tl.to(["#vh-copy", "#vh-map"], { opacity: 0, duration: 0.5, ease: "power2.in" }, 8.5);
+    window.__timelines["vhills"] = tl;
+  </script>
+</template>

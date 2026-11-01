@@ -1,0 +1,171 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #1c1712;
+      font-family: "Lato", sans-serif;
+      color: #f4eee4;
+    }
+    #roast-outside {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #6f9cc0 0%, #a9c4d6 45%, #f2d3a6 72%, #d9a273 100%);
+    }
+    #roast-land {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #roast-head {
+      position: absolute;
+      left: 192px;
+      top: 130px;
+      width: 1300px;
+    }
+    .roast-eyebrow {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #7a2e1a;
+    }
+    .roast-title {
+      margin-top: 14px;
+      font-family: "EB Garamond", serif;
+      font-size: 88px;
+      font-weight: 600;
+      line-height: 1.05;
+      color: #1c1712;
+    }
+    .roast-label {
+      position: absolute;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+    .roast-label b {
+      display: block;
+      font-size: 44px;
+    }
+    #roast-o1 { left: 192px; top: 400px; width: 760px; color: #2a2018; }
+    #roast-o2 { left: 192px; top: 520px; width: 760px; color: #2a2018; }
+    #roast-inside {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 68% 55%, #3a2a1c 0%, #1c1712 70%);
+    }
+    #roast-art {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #roast-i1 { left: 192px; top: 300px; width: 760px; }
+    #roast-i1 b {
+      font-family: "EB Garamond", serif;
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 1.05;
+      color: #f4eee4;
+    }
+    #roast-i1 span { color: #e3a27c; font-size: 34px; }
+    #roast-i2 { left: 192px; top: 520px; width: 680px; color: #e6dccb; }
+    #roast-i2 b { color: #e8c88a; }
+    #roast-i3 { left: 192px; top: 690px; width: 680px; color: #e6dccb; }
+    #roast-i3 b { color: #e8c88a; }
+  </style>
+  <div id="root" data-composition-id="roast" data-width="1920" data-height="1080">
+    <div id="roast-outside">
+      <svg id="roast-land" viewBox="0 0 1920 1080">
+        <path d="M0 700 L 220 640 L 380 650 L 520 600 L 760 610 L 900 660 L 1180 630 L 1320 580 L 1560 590 L 1700 640 L 1920 620 L 1920 1080 L 0 1080 Z" fill="#b4673f" />
+        <path d="M0 780 C 400 760 900 770 1920 750 L 1920 1080 L 0 1080 Z" fill="#8a5a3a" />
+        <g id="roast-trailer">
+          <ellipse cx="0" cy="250" rx="330" ry="22" fill="#4a3022" opacity="0.45" />
+          <path d="M-300 220 C -300 60 -220 0 -60 0 L 120 0 C 260 0 320 70 320 200 L 320 225 L -300 225 Z" fill="#c9ced3" />
+          <path d="M-270 60 C -240 20 -180 10 -60 10 L 120 10 C 230 10 290 50 305 110 L -285 110 Z" fill="#e6eaed" opacity="0.8" />
+          <line x1="-300" y1="150" x2="320" y2="150" stroke="#9aa1a8" stroke-width="4" />
+          <rect x="140" y="50" width="120" height="70" rx="20" fill="#5d7f99" />
+          <rect x="-200" y="60" width="140" height="60" rx="18" fill="#5d7f99" />
+          <rect x="20" y="70" width="80" height="150" rx="8" fill="#a7adb3" />
+          <circle cx="-80" cy="232" r="38" fill="#2a2420" />
+          <circle cx="-80" cy="232" r="16" fill="#8f949a" />
+          <rect x="320" y="200" width="90" height="10" fill="#6b6f74" />
+        </g>
+      </svg>
+      <div id="roast-head">
+        <p class="roast-eyebrow">04 · The roast</p>
+        <h2 class="roast-title">Roasted in Santa Fe</h2>
+      </div>
+      <p id="roast-o1" class="roast-label"><b>Jirani Coffee Lab</b>A mobile roastery and training lab</p>
+      <p id="roast-o2" class="roast-label"><b>An Airstream at Reunity Resources</b>Spent grounds go back into the soil</p>
+    </div>
+    <div id="roast-inside">
+      <svg id="roast-art" viewBox="0 0 1920 1080">
+        <g transform="translate(150 0)">
+        <g id="roast-heat">
+          <rect x="1150" y="660" width="380" height="14" rx="7" fill="#e3743a" />
+          <rect x="1150" y="690" width="380" height="14" rx="7" fill="#e3743a" />
+        </g>
+        <path d="M1260 250 L 1420 250 L 1380 360 L 1300 360 Z" fill="#6e7378" />
+        <rect x="1300" y="360" width="80" height="40" fill="#55595d" />
+        <rect x="1110" y="400" width="460" height="300" rx="40" fill="#2e3236" />
+        <rect x="1130" y="420" width="420" height="40" rx="12" fill="#43484d" />
+        <circle cx="1240" cy="560" r="90" fill="#3a3f44" stroke="#5c6267" stroke-width="10" />
+        <circle cx="1240" cy="560" r="40" fill="#c8741e" opacity="0.65" id="roast-window" />
+        <rect x="1440" y="500" width="100" height="140" rx="12" fill="#1f2226" />
+        <rect x="1455" y="515" width="70" height="40" rx="6" fill="#7fb2c9" />
+        <rect x="1180" y="700" width="40" height="120" fill="#24282b" />
+        <rect x="1460" y="700" width="40" height="120" fill="#24282b" />
+        <ellipse cx="1000" cy="800" rx="230" ry="70" fill="#3d4247" />
+        <ellipse cx="1000" cy="790" rx="210" ry="58" fill="#55595d" />
+        <g id="roast-beans">
+          <ellipse class="roast-bean" cx="900" cy="780" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="940" cy="800" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="980" cy="770" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1020" cy="805" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1060" cy="775" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1100" cy="795" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="870" cy="805" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="960" cy="815" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1040" cy="820" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1130" cy="785" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="920" cy="765" rx="16" ry="11" fill="#8ba35a" />
+          <ellipse class="roast-bean" cx="1000" cy="790" rx="16" ry="11" fill="#8ba35a" />
+        </g>
+        <g id="roast-arm">
+          <line x1="1000" y1="790" x2="1180" y2="790" stroke="#9aa1a8" stroke-width="10" stroke-linecap="round" />
+        </g>
+        <circle cx="1000" cy="790" r="16" fill="#9aa1a8" />
+        </g>
+      </svg>
+      <p id="roast-i1" class="roast-label"><b>F16 Revelation</b><span>US Roaster Corp · built in Oklahoma City</span></p>
+      <p id="roast-i2" class="roast-label"><b>All-electric</b>Roasts clean, with a built-in catalytic converter</p>
+      <p id="roast-i3" class="roast-label"><b>YouthWorks Santa Fe</b>Young people learning the trade, one roast at a time</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#roast-head", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 0.3);
+    tl.fromTo("#roast-trailer", { x: 2400, y: 640 }, { x: 1420, y: 640, duration: 3.2, ease: "power2.out" }, 0.4);
+    tl.to("#roast-trailer", { x: 1380, duration: 5, ease: "sine.inOut" }, 3.6);
+    tl.fromTo("#roast-o1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 2.0);
+    tl.fromTo("#roast-o2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 5.0);
+    tl.fromTo("#roast-inside", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.inOut" }, 8.6);
+    tl.to("#roast-outside", { opacity: 0, duration: 0.8, ease: "power2.inOut" }, 8.6);
+    tl.fromTo("#roast-art", { scale: 1.05, transformOrigin: "65% 55%" }, { scale: 1.0, transformOrigin: "65% 55%", duration: 11, ease: "sine.out" }, 8.6);
+    tl.fromTo("#roast-i1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 9.2);
+    tl.fromTo("#roast-heat", { opacity: 0.35 }, { opacity: 1, duration: 0.7, ease: "sine.inOut", repeat: 13, yoyo: true }, 9.0);
+    tl.fromTo("#roast-window", { opacity: 0.35 }, { opacity: 0.85, duration: 0.9, ease: "sine.inOut", repeat: 11, yoyo: true }, 9.0);
+    tl.fromTo("#roast-arm", { rotation: 0, svgOrigin: "1000 790" }, { rotation: 1080, svgOrigin: "1000 790", duration: 10.4, ease: "none" }, 9.2);
+    tl.fromTo(".roast-bean", { fill: "#8ba35a" }, { fill: "#c9a24a", duration: 2.0, stagger: 0.08, ease: "sine.inOut" }, 9.6);
+    tl.to(".roast-bean", { fill: "#5a3520", duration: 2.6, stagger: 0.08, ease: "sine.inOut" }, 11.8);
+    tl.fromTo("#roast-i2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 12.6);
+    tl.fromTo("#roast-i3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 14.3);
+    tl.to("#root > *", { opacity: 0, duration: 0.5, ease: "power2.in" }, 19.0);
+    window.__timelines["roast"] = tl;
+  </script>
+</template>

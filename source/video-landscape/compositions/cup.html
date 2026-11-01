@@ -1,0 +1,183 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      background: #1c1712;
+      font-family: "Lato", sans-serif;
+      color: #f4eee4;
+    }
+    #cup-journey {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, #3a2a1c 0%, #1c1712 75%);
+    }
+    #cup-jhead {
+      position: absolute;
+      left: 192px;
+      top: 130px;
+      width: 1500px;
+    }
+    .cup-eyebrow {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #e3a27c;
+    }
+    .cup-title {
+      margin-top: 14px;
+      font-family: "EB Garamond", serif;
+      font-size: 88px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+    #cup-steps-art {
+      position: absolute;
+      left: 192px;
+      top: 470px;
+      width: 1536px;
+      height: 240px;
+    }
+    .cup-step {
+      position: absolute;
+      top: 730px;
+      width: 300px;
+      text-align: center;
+      font-family: "EB Garamond", serif;
+      font-size: 52px;
+      font-weight: 500;
+    }
+    #cup-s1 { left: 222px; }
+    #cup-s2 { left: 634px; }
+    #cup-s3 { left: 1046px; }
+    #cup-s4 { left: 1458px; }
+    #cup-scene {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #c97f55 0%, #b06a44 55%, #5a3a26 56%, #3d2819 100%);
+    }
+    #cup-glow {
+      position: absolute;
+      left: 900px;
+      top: -200px;
+      width: 1200px;
+      height: 1000px;
+      background: radial-gradient(circle, rgba(255, 214, 150, 0.45) 0%, rgba(255, 214, 150, 0) 65%);
+    }
+    #cup-art {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1920px;
+      height: 1080px;
+    }
+    #cup-quote {
+      position: absolute;
+      left: 192px;
+      top: 150px;
+      width: 860px;
+      font-family: "EB Garamond", serif;
+      font-size: 68px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.18;
+      color: #fbf3e3;
+      text-shadow: 0 2px 18px rgba(40, 20, 10, 0.35);
+    }
+    .cup-place {
+      position: absolute;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #fbf3e3;
+    }
+    #cup-p1 { left: 192px; top: 910px; width: 440px; }
+    #cup-p2 { left: 1290px; top: 910px; width: 440px; text-align: right; }
+    #cup-logo {
+      position: absolute;
+      left: 192px;
+      top: 520px;
+      width: 210px;
+      height: 210px;
+    }
+    #cup-end {
+      position: absolute;
+      left: 432px;
+      top: 596px;
+      width: 760px;
+      font-family: "EB Garamond", serif;
+      font-size: 44px;
+      font-weight: 600;
+      color: #fbf3e3;
+    }
+  </style>
+  <div id="root" data-composition-id="cup" data-width="1920" data-height="1080">
+    <div id="cup-scene">
+      <div id="cup-glow"></div>
+      <svg id="cup-art" viewBox="0 0 1920 1080">
+        <rect x="1430" y="160" width="300" height="300" rx="24" fill="#8c5133" opacity="0.55" />
+        <rect x="1450" y="180" width="260" height="260" rx="16" fill="#f2c98f" opacity="0.55" />
+        <path id="cup-arc" d="M420 880 C 700 600 1150 600 1440 880" stroke="#fbf3e3" stroke-width="5" stroke-dasharray="4 18" stroke-linecap="round" fill="none" />
+        <circle id="cup-dot1" cx="420" cy="880" r="12" fill="#fbf3e3" />
+        <circle id="cup-dot2" cx="1440" cy="880" r="12" fill="#fbf3e3" />
+        <g transform="translate(250 0)"><g id="cup-cup">
+          <ellipse cx="1380" cy="760" rx="210" ry="34" fill="#2a1a10" opacity="0.5" />
+          <path d="M1230 560 L 1530 560 C 1525 680 1480 750 1380 760 C 1280 750 1235 680 1230 560 Z" fill="#e9dcc6" />
+          <path d="M1530 590 C 1600 590 1610 670 1540 680" stroke="#e9dcc6" stroke-width="18" fill="none" />
+          <ellipse cx="1380" cy="560" rx="150" ry="26" fill="#3b2314" />
+          <path d="M1240 600 C 1300 620 1460 620 1520 600" stroke="#c9b597" stroke-width="5" fill="none" />
+        </g>
+        <g id="cup-steam-wrap"><g id="cup-steam" stroke="#fbf3e3" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.7">
+          <path id="cup-st1" d="M1330 530 C 1300 480 1360 440 1330 390 S 1350 300 1330 260" />
+          <path id="cup-st2" d="M1390 530 C 1360 470 1420 430 1390 370 S 1410 290 1390 240" />
+          <path id="cup-st3" d="M1450 530 C 1420 480 1480 440 1450 390 S 1470 310 1450 270" />
+        </g></g></g>
+      </svg>
+      <p id="cup-quote">“Every sip connects us to the farmer, the soil and the tiny guardians who made it possible.”</p>
+      <p id="cup-p1" class="cup-place">KENYA, EAST AFRICA</p>
+      <p id="cup-p2" class="cup-place">SANTA FE, NEW MEXICO</p>
+      <img id="cup-logo" src="assets/brand/jirani-logo.png" alt="Jirani Kenyan Coffee logo" />
+      <p id="cup-end">Jirani Kahawa · The Neighbor’s Cup</p>
+    </div>
+    <div id="cup-journey">
+      <div id="cup-jhead">
+        <p class="cup-eyebrow">07 · The global neighborhood</p>
+        <h2 class="cup-title">From the hillside to the cup</h2>
+      </div>
+      <svg id="cup-steps-art" viewBox="0 0 1536 240">
+        <line id="cup-path" x1="180" y1="120" x2="1356" y2="120" stroke="#e3a27c" stroke-width="4" stroke-dasharray="1180" stroke-dashoffset="1180" />
+        <g id="cup-i1"><circle cx="180" cy="120" r="96" fill="#2c211a" stroke="#e3a27c" stroke-width="4" /><circle cx="160" cy="130" r="30" fill="#b5432a" /><circle cx="200" cy="112" r="28" fill="#a8321f" /><path d="M170 92 C 180 70 200 62 220 66" stroke="#4f6b3a" stroke-width="7" fill="none" /></g>
+        <g id="cup-i2"><circle cx="572" cy="120" r="96" fill="#2c211a" stroke="#e3a27c" stroke-width="4" /><path d="M572 62 C 600 104 620 130 620 152 A 48 48 0 0 1 524 152 C 524 130 544 104 572 62 Z" fill="#7fb2c9" /></g>
+        <g id="cup-i3"><circle cx="964" cy="120" r="96" fill="#2c211a" stroke="#e3a27c" stroke-width="4" /><circle cx="964" cy="96" r="28" fill="#e8c88a" /><line x1="904" y1="156" x2="1024" y2="156" stroke="#c9b597" stroke-width="8" /><line x1="914" y1="156" x2="914" y2="186" stroke="#c9b597" stroke-width="6" /><line x1="1014" y1="156" x2="1014" y2="186" stroke="#c9b597" stroke-width="6" /></g>
+        <g id="cup-i4"><circle cx="1356" cy="120" r="96" fill="#2c211a" stroke="#e3a27c" stroke-width="4" /><ellipse cx="1356" cy="120" rx="34" ry="48" fill="#6b4226" transform="rotate(20 1356 120)" /><path d="M1346 76 C 1366 104 1346 136 1366 164" stroke="#2c1a0e" stroke-width="6" fill="none" /></g>
+      </svg>
+      <p id="cup-s1" class="cup-step">Picked</p>
+      <p id="cup-s2" class="cup-step">Washed</p>
+      <p id="cup-s3" class="cup-step">Dried</p>
+      <p id="cup-s4" class="cup-step">Roasted</p>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#cup-jhead", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+    tl.fromTo("#cup-path", { strokeDashoffset: 1180 }, { strokeDashoffset: 0, duration: 3.6, ease: "none" }, 0.8);
+    [["#cup-i1", "#cup-s1", 0.8], ["#cup-i2", "#cup-s2", 1.9], ["#cup-i3", "#cup-s3", 2.7], ["#cup-i4", "#cup-s4", 4.0]].forEach(([icon, label, t]) => {
+      tl.fromTo(icon, { opacity: 0, scale: 0.7, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, transformOrigin: "50% 50%", duration: 0.5, ease: "back.out(1.6)" }, t);
+      tl.fromTo(label, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, t + 0.1);
+    });
+    tl.to("#cup-journey", { opacity: 0, duration: 0.8, ease: "power2.inOut" }, 5.0);
+    tl.fromTo("#cup-scene", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power2.inOut" }, 5.0);
+    tl.fromTo("#cup-art", { scale: 1.05, transformOrigin: "60% 50%" }, { scale: 1.0, transformOrigin: "60% 50%", duration: 8.5, ease: "sine.out" }, 5.0);
+    tl.fromTo("#cup-steam", { y: 20, opacity: 0 }, { y: -60, opacity: 0.7, duration: 3, ease: "sine.out" }, 5.2);
+    tl.to("#cup-steam", { y: -120, opacity: 0.35, duration: 5.3, ease: "sine.inOut" }, 8.2);
+    tl.fromTo("#cup-quote", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }, 5.5);
+    tl.fromTo("#cup-arc", { opacity: 0 }, { opacity: 1, duration: 2.4, ease: "sine.inOut" }, 6.4);
+    tl.fromTo(["#cup-dot1", "#cup-p1"], { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 6.4);
+    tl.fromTo(["#cup-dot2", "#cup-p2"], { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 8.4);
+    tl.fromTo("#cup-logo", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.9, ease: "back.out(1.4)" }, 10.6);
+    tl.fromTo("#cup-end", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 10.9);
+    window.__timelines["cup"] = tl;
+  </script>
+</template>
